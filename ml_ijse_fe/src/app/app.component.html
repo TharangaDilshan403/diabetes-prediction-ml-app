@@ -8,50 +8,53 @@
       <mat-card-subtitle>Fill the form for calculation</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
+<!--      Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age,Outcome
+6,148,72,35,0,33.6,0.627,50,1
+1,85,66,29,0,26.6,0.351,31,0-->
       <form [formGroup]="diabetesCalculationForm" (ngSubmit)="calculate()">
         <div class="row">
           <div class="col-lg-4">
             <mat-form-field appearance="outline" class="full-width">
               <mat-label>Pregnancies Count</mat-label>
-              <input matInput type="number" placeholder="Ex.1" formControlName="pregnancies" min="0">
+              <input matInput type="number" placeholder="Ex.6" formControlName="pregnancies" min="0">
             </mat-form-field>
           </div>
           <div class="col-lg-4">
             <mat-form-field appearance="outline" class="full-width">
               <mat-label>Glucose Level</mat-label>
-              <input placeholder="Ex. (mm Hg)" matInput type="number" formControlName="glucose">
+              <input placeholder="Ex.148 (mm Hg)" matInput type="number" formControlName="glucose">
             </mat-form-field>
           </div>
           <div class="col-lg-4">
             <mat-form-field appearance="outline" class="full-width">
               <mat-label>Blood Pressure</mat-label>
-              <input placeholder="Ex. (mm Hg)" matInput type="number" formControlName="bloodPressure">
+              <input placeholder="Ex.72 (mm Hg)" matInput type="number" formControlName="pressure">
             </mat-form-field>
           </div>
           <div class="col-lg-4">
             <mat-form-field appearance="outline" class="full-width">
               <mat-label>Skin Thickness</mat-label>
-              <input matInput placeholder="Ex. mm" type="number" formControlName="skinThickness">
+              <input matInput placeholder="Ex.35 mm" type="number" formControlName="thickness">
             </mat-form-field>
           </div>
 
         <div class="col-lg-8">
           <mat-form-field appearance="outline" class="full-width">
             <mat-label>Insulin</mat-label>
-            <input matInput placeholder="Ex. mu U/ml" type="number" formControlName="insulin">
+            <input matInput placeholder="Ex.0 mu U/ml" type="number" formControlName="insulin">
           </mat-form-field>
         </div>
 
           <div class="col-lg-8">
             <mat-form-field appearance="outline" class="full-width">
               <mat-label>BMI</mat-label>
-              <input matInput placeholder="Ex.  kg/(height in m)^2" type="number" formControlName="bmi">
+              <input matInput placeholder="Ex. 33.6 kg/(height in m)^2" type="number" formControlName="bmi">
             </mat-form-field>
           </div>
         <div class="col-lg-4">
           <mat-form-field appearance="outline" class="full-width">
             <mat-label>Diabetes Pedigree</mat-label>
-            <input matInput placeholder="Ex. BMI" type="number" formControlName="diabetesPedigree">
+            <input matInput placeholder="Ex.0.627 BMI" type="number" formControlName="dpf">
           </mat-form-field>
         </div>
 
@@ -59,7 +62,7 @@
         <div class="col-lg-4">
           <mat-form-field appearance="outline" class="full-width">
             <mat-label>Age</mat-label>
-            <input matInput placeholder="Ex. years" type="number" formControlName="age">
+            <input matInput placeholder="Ex.50 years" type="number" formControlName="age">
           </mat-form-field>
         </div>
       </form>
