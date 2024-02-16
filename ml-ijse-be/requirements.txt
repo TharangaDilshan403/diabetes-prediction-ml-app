@@ -1,5 +1,6 @@
 Flask
 numpy
-sklearn
+sklearn ==  1.2.2
 pandas
 flask_cors
+# python 3.9
